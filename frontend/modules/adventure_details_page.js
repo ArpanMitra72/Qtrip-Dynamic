@@ -67,22 +67,21 @@ function addBootstrapPhotoGallery(images) {
   `;
   
   images.map((image,index)=>{
-    let elem = document.createElement("div");
+    // let elem = document.createElement("div");
+   
     if(index===0){
-      elem.innerHTML =`
+       document.getElementById("take-images").innerHTML +=`
       <div class="carousel-item active">
-        <img src="${image}" class="d-block w-100 activty-card-image" alt="default image"/>
+        <img src="${image}" class="d-block w-100 activity-card-image" alt="default image"/>
       </div>
     `; 
     }else{
-      elem.innerHTML =`
+       document.getElementById("take-images").innerHTML +=`
       <div class="carousel-item">
-        <img src="${image}" class="d-block w-100 activty-card-image" alt="default image"/>
+        <img src="${image}" class="d-block w-100 activity-card-image" alt="default image"/>
       </div>
     `; 
     }
-    
-    document.getElementById("take-images").append(elem);
   });
 }
 
